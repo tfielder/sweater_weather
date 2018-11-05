@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'api/v1/forecast' do
   it 'returns a successful response' do
-    get '/api/v1/forecast'
+    get '/api/v1/forecast?location=denver,co'
 
     forecast = JSON.parse(response.body)
 
