@@ -12,8 +12,6 @@ class LocationSearch
   def connection(url)
     connect = Faraday.new(:url => "#{url}") do |f|
       f.request :url_encoded
-      # f.headers ['Accept'] = 'application/json'
-      # f.headers ['Content-Type'] = 'application/json'
       f.adapter Faraday.default_adapter
     end
   end

@@ -3,8 +3,4 @@ class Api::V1::ForecastController < ApplicationController
     result = LocationSearch.new(params[:location]).get_results
     render json: result
   end
-
-  # private
-  # def forecast_params
-  # end
 end
