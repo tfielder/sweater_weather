@@ -1,4 +1,4 @@
-class Api::V1::AccountController < ApplicationController
+class Api::V1::UserController < ApplicationController
   def create
     if !User.find_by_email(params[:email]) && (params[:password] == params[:password_confirmation])
       user = User.create!(email: params[:email], password: params[:password])
