@@ -32,9 +32,8 @@ class LocationSearch
   end
 
   def get_flikr_response
-    response = connection("https://api.flickr.com/services/rest/").get, keys
+    response = connection("https://api.flickr.com/services/rest/").get '', keys
     results = JSON.parse(response.body)
-    binding.pry
   end
 
   def keys
@@ -46,7 +45,9 @@ class LocationSearch
       :safe_search => "1",
       :content_type => "1",
       :format => "json",
-      :nojsoncallback => "1"
+      :nojsoncallback => "1",
+      :page => "1",
+      :per_page => "20"
     }
   end
 end
