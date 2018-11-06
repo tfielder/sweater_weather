@@ -6,7 +6,7 @@ class GiphyApiBuilder
   def return_response
     {
       data: {
-              images: array_builder
+              images: five_day_array
             },
       copyright: "2018"
     }
@@ -16,6 +16,10 @@ class GiphyApiBuilder
 
   def weekly_outlook
     @dark_sky["daily"]["data"]
+  end
+
+  def five_day_array
+    array_builder[0..4]
   end
 
   def array_builder
