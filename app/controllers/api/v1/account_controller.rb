@@ -3,7 +3,6 @@ class Api::V1::AccountController < ApplicationController
     #if !User.find_by_email(params[:email]) && (params[:password] == params[:password_confirmation])
       #render status: 201, body: { "api_key": "#{User.find_by_email(params[:email])}"}
 
-
   end
 
   # def lookup
