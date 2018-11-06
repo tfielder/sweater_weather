@@ -2,9 +2,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def initialize
-    create_api_key
-  end
+  before_save :create_api_key
 
   private
   def create_api_key
