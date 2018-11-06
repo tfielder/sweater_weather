@@ -28,3 +28,10 @@
 
 # Ignore coverage
 /coverage
+
+# Ignore application configuration
+/config/application.yml
+
+# Ignore cassettes
+/spec/cassettes
+
