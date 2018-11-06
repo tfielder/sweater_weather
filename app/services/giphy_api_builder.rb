@@ -2,14 +2,15 @@ class GiphyApiBuilder
   def initialize(dark_sky, giphy)
     @dark_sky = dark_sky
     @giphy = giphy
-    get_weather
   end
 
   def return_response
-    {  data: {
+    {
+      data: {
        images: get_weather
+     },
+        copyright: "2018"
     }
-        copyright: "2018"}
   end
 
   def get_weather
@@ -17,11 +18,10 @@ class GiphyApiBuilder
       new_hash = {}
       new_hash["time"] = hash["time"]
       new_hash["summary"] = hash["summary"]
-      giphy_result= get_giphy(hash["summary"].gsub(/ /, '+'))
+      giphy_result = get_giphy(hash["summary"].gsub(/ /, '+'))
       new_hash["url"] = giphy_result["data"][0]["url"]
       new_hash
     end
-    binding.pry
   end
 
   def weekly_outlook
