@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-05T16:50:33-07:00">2018-11-05T16:50:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-05T17:26:45-07:00">2018-11-05T17:26:45-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -133,7 +133,7 @@
       <tr>
         <td class="strong"><a href="#cddd109c2ab37f3b1a03d6d542732e1dfdfa03a7" class="src_link" title="app/services/location_search.rb">app/services/location_search.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>31</td>
+        <td>29</td>
         <td>18</td>
         <td>18</td>
         <td>0</td>
@@ -483,7 +483,7 @@
       <tr>
         <td class="strong"><a href="#cddd109c2ab37f3b1a03d6d542732e1dfdfa03a7" class="src_link" title="app/services/location_search.rb">app/services/location_search.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>31</td>
+        <td>29</td>
         <td>18</td>
         <td>18</td>
         <td>0</td>
@@ -890,7 +890,7 @@
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby"></code>
+          <code class="ruby"> </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
@@ -917,103 +917,91 @@
           <code class="ruby">      f.request :url_encoded</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby">      # f.headers [&#39;Accept&#39;] = &#39;application/json&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="16">
-          
-          
-          <code class="ruby">      # f.headers [&#39;Content-Type&#39;] = &#39;application/json&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="17">
+        <li class="covered" data-hits="8" data-linenumber="15">
           <span class="hits">8</span>
           
           <code class="ruby">      f.adapter Faraday.default_adapter</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_google_geo_response</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
+        <li class="covered" data-hits="5" data-linenumber="20">
           <span class="hits">5</span>
           
           <code class="ruby">    response = connection(&#39;https://maps.googleapis.com/maps/api/geocode/&#39;).get &#39;json&#39;, {:address =&gt; &quot;#{@location}&quot;, :key =&gt; &quot;#{ENV[&#39;google_api_key&#39;]}&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="23">
+        <li class="covered" data-hits="5" data-linenumber="21">
           <span class="hits">5</span>
           
           <code class="ruby">    results = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="24">
+        <li class="covered" data-hits="5" data-linenumber="22">
           <span class="hits">5</span>
           
           <code class="ruby">    results = results[&quot;results&quot;][0][&quot;geometry&quot;][&quot;location&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_dark_sky_response</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="28">
+        <li class="covered" data-hits="3" data-linenumber="26">
           <span class="hits">3</span>
           
           <code class="ruby">    response = connection(&quot;https://api.darksky.net/forecast/#{ENV[&#39;dark_sky_api_key&#39;]}/#{@coordinates[&quot;lat&quot;]},#{@coordinates[&quot;lng&quot;]}&quot;).get</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
+        <li class="covered" data-hits="3" data-linenumber="27">
           <span class="hits">3</span>
           
           <code class="ruby">    results = JSON.parse(response.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">end</code>
