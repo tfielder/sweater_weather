@@ -7,8 +7,6 @@ describe 'API response from giphy' do
         get '/api/v1/gifs/?location=denver,co'
 
         expect(response).to be_successful
-
-        # expect(response.body).to eq()
       end
     end
   end
