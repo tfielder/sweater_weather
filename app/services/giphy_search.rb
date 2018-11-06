@@ -1,19 +1,11 @@
-class LocationSearch
+class GiphySearch
   def initialize(location)
     @location = location
     @coordinates = get_google_geo_response
   end
 
-  def get_giphy
-    parse(get_giphy_response)
-  end
-
   def get_results
     parse(get_dark_sky_response)
-  end
-
-  def get_photos
-    parse(get_flikr_response)
   end
 
   private
@@ -37,19 +29,8 @@ class LocationSearch
     response = connection("https://api.flickr.com/services/rest/").get '', keys
   end
 
-  def get_giphy_response
-    response = connection("https://api.giphy.com/v1/gifs/search").get '', giphy_keys
-  end
-
   def parse(result)
     JSON.parse(result.body)
-  end
-
-  def giphy_keys(term)
-    {
-      :api_key  => ENV['giphy_api_key'],
-      :q        => "#{term}"
-    }
   end
 
   def keys
