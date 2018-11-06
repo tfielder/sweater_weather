@@ -7,6 +7,13 @@ describe 'API response from giphy' do
         get '/api/v1/gifs/?location=denver,co'
 
         expect(response).to be_successful
+
+        result = JSON.parse(response.body)
+        expect(result.keys.include?("data")).to be(true)
+        expect(result["data"]["images"][0].keys.include?("time")).to be(true)
+        expect(result["data"]["images"][0].keys.include?("summary")).to be(true)
+        expect(result["data"]["images"][0].keys.include?("url")).to be(true)
+        expect(result.keys.include?("copyright")).to be(true)
       end
     end
   end
