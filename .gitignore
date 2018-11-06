@@ -28,3 +28,9 @@
 
 # Ignore coverage
 /coverage
+
+# Ignore cassettes
+/spec/cassettes
+
+# Ignore config
+/config/application.yml
