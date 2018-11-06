@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-05T20:38:52-07:00">2018-11-05T20:38:52-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-05T21:09:00-07:00">2018-11-05T21:09:00-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">67.31%</span></span>
+    (<span class="covered_percent"><span class="red">66.67%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.86
+         1.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>10</b> files in total.
-    <b>52</b> relevant lines. 
-    <span class="green"><b>35</b> lines covered</span> and
+    <b>51</b> relevant lines. 
+    <span class="green"><b>34</b> lines covered</span> and
     <span class="red"><b>17</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -143,11 +143,11 @@
       <tr>
         <td class="strong"><a href="#cddd109c2ab37f3b1a03d6d542732e1dfdfa03a7" class="src_link" title="app/services/location_search.rb">app/services/location_search.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>53</td>
-        <td>25</td>
-        <td>25</td>
+        <td>55</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>3.5</td>
       </tr>
       
     </tbody>
@@ -451,19 +451,19 @@
           <div class="file_list_container" id="Ungrouped">
   <h2>
     <span class="group_name">Ungrouped</span>
-    (<span class="covered_percent"><span class="red">75.76%</span></span>
+    (<span class="covered_percent"><span class="red">75.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.5
+         2.63
        </span>
     </span> hits/line)
   </h2>
   <a name="Ungrouped"></a>
   <div>
     <b>3</b> files in total.
-    <b>33</b> relevant lines. 
-    <span class="green"><b>25</b> lines covered</span> and
+    <b>32</b> relevant lines. 
+    <span class="green"><b>24</b> lines covered</span> and
     <span class="red"><b>8</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -503,11 +503,11 @@
       <tr>
         <td class="strong"><a href="#cddd109c2ab37f3b1a03d6d542732e1dfdfa03a7" class="src_link" title="app/services/location_search.rb">app/services/location_search.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>53</td>
-        <td>25</td>
-        <td>25</td>
+        <td>55</td>
+        <td>24</td>
+        <td>24</td>
         <td>0</td>
-        <td>3.3</td>
+        <td>3.5</td>
       </tr>
       
     </tbody>
@@ -899,8 +899,8 @@
     <h3>app/services/location_search.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>24</b> relevant lines. 
+      <span class="green"><b>24</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -953,7 +953,7 @@
         <li class="covered" data-hits="3" data-linenumber="8">
           <span class="hits">3</span>
           
-          <code class="ruby">    get_dark_sky_response</code>
+          <code class="ruby">    parse(get_dark_sky_response)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -977,7 +977,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    get_flikr_response</code>
+          <code class="ruby">    parse(get_flikr_response)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
@@ -1055,172 +1055,184 @@
         <li class="covered" data-hits="6" data-linenumber="25">
           <span class="hits">6</span>
           
-          <code class="ruby">    results = JSON.parse(response.body)</code>
+          <code class="ruby">    parse(response)[&quot;results&quot;][0][&quot;geometry&quot;][&quot;location&quot;]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="26">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="26">
           
-          <code class="ruby">    results = results[&quot;results&quot;][0][&quot;geometry&quot;][&quot;location&quot;]</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_dark_sky_response</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="30">
+        <li class="covered" data-hits="3" data-linenumber="29">
           <span class="hits">3</span>
           
           <code class="ruby">    response = connection(&quot;https://api.darksky.net/forecast/#{ENV[&#39;dark_sky_api_key&#39;]}/#{@coordinates[&quot;lat&quot;]},#{@coordinates[&quot;lng&quot;]}&quot;).get</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="31">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    results = JSON.parse(response.body)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
           <code class="ruby">  def get_flikr_response</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
           <code class="ruby">    response = connection(&quot;https://api.flickr.com/services/rest/&quot;).get &#39;&#39;, keys</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    results = JSON.parse(response.body)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">  def keys</code>
+          <code class="ruby">  def parse(result)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="covered" data-hits="10" data-linenumber="37">
+          <span class="hits">10</span>
           
-          
-          <code class="ruby">    {</code>
+          <code class="ruby">    JSON.parse(result.body)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">      :method =&gt; &#39;flickr.photos.search&#39;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">      :api_key =&gt; ENV[&#39;flickr_api_key&#39;],</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">      :lat =&gt; &quot;#{@coordinates[&quot;lat&quot;]}&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby">      :lon =&gt; &quot;#{@coordinates[&quot;lng&quot;]}&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">      :safe_search =&gt; &quot;1&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">      :content_type =&gt; &quot;1&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">      :format =&gt; &quot;json&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">      :nojsoncallback =&gt; &quot;1&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">      :page =&gt; &quot;1&quot;,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
-          
-          
-          <code class="ruby">      :per_page =&gt; &quot;20&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def keys</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">      :method =&gt; &#39;flickr.photos.search&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">      :api_key =&gt; ENV[&#39;flickr_api_key&#39;],</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="44">
+          
+          
+          <code class="ruby">      :lat =&gt; &quot;#{@coordinates[&quot;lat&quot;]}&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">      :lon =&gt; &quot;#{@coordinates[&quot;lng&quot;]}&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">      :safe_search =&gt; &quot;1&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">      :content_type =&gt; &quot;1&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">      :format =&gt; &quot;json&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">      :nojsoncallback =&gt; &quot;1&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">      :page =&gt; &quot;1&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">      :per_page =&gt; &quot;20&quot;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">      :extras =&gt; &quot;url_o&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">end</code>
