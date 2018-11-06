@@ -4,7 +4,7 @@ class Api::V1::AccountController < ApplicationController
       user = User.create!(email: params[:email], password: params[:password])
       render status: 201, body: { "api_key": "#{User.find_by_email(params[:email]).api_key}"}
     else
-      render status: 400, message: "Could not create user"
+      render status: 400
     end
   end
 
