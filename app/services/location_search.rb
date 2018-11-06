@@ -7,7 +7,7 @@ class LocationSearch
   def get_results
     get_dark_sky_response
   end
-
+ 
   private
   def connection(url)
     connect = Faraday.new(:url => "#{url}") do |f|
