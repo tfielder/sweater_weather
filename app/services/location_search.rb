@@ -4,7 +4,7 @@ class LocationSearch
     @coordinates = get_google_geo_response
   end
 
-  def get_results
+  def get_dark_sky
     parse(get_dark_sky_response)
   end
 

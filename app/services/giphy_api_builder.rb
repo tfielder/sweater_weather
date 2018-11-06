@@ -1,6 +1,6 @@
 class GiphyApiBuilder
   def initialize(location)
-    @dark_sky =  LocationSearch.new(location).get_results
+    @dark_sky =  LocationSearch.new(location).get_dark_sky
   end
 
   def return_response
