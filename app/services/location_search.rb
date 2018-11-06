@@ -5,7 +5,7 @@ class LocationSearch
   end
 
   def get_giphy
-    parse(get_giphy_response)
+    result = parse(get_giphy_response)
   end
 
   def get_results
@@ -45,10 +45,10 @@ class LocationSearch
     JSON.parse(result.body)
   end
 
-  def giphy_keys(term)
+  def giphy_keys
     {
       :api_key  => ENV['giphy_api_key'],
-      :q        => "#{term}"
+      :q        => "sunny"
     }
   end
 

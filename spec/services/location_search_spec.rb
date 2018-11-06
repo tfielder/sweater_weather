@@ -7,6 +7,5 @@ describe 'Location Search' do
   end
   it 'returns a successful response' do
     search = LocationSearch.new("denver,co")
-    
   end
 end

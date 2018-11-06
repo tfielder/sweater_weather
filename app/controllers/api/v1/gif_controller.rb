@@ -1,6 +1,11 @@
 class Api::V1::GifController < ApplicationController
   def index
-    result = LocationSearch.new(params[:location]).get_response
+
+
+    dark_sky = LocationSearch.new(params[:location]).get_results
+    result = LocationSearch.new(params[:location]).get_giphy
+    response = GiphyApiBuilder.new(dark_sky, result)
+
     render json: result
   end
 end
