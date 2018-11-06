@@ -14,6 +14,8 @@ describe 'API response from giphy' do
         expect(result["data"]["images"][0].keys.include?("summary")).to be(true)
         expect(result["data"]["images"][0].keys.include?("url")).to be(true)
         expect(result.keys.include?("copyright")).to be(true)
+        expect(result["data"]["images"].count).to eq(5)
+
       end
     end
   end
