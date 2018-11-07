@@ -35,8 +35,10 @@ class FlickrRequest
       :nojsoncallback => "1",
       :page           => "1",
       :per_page       => "20",
-      :extras         => "url_o"
+      :extras         => "url_o",
+      :tags           => "landmark,city,historical,iconic"
     }
   end
 
 end
+
