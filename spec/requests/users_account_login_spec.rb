@@ -15,8 +15,7 @@ describe 'api/v1/sessions' do
 
      expect(response).to be_successful
      expect(response.status).to eq(200)
-     expect(response.body).to have_content("api_key: #{api_key}")
-     # expect(User.find_by_email("whatever@example.com").id).to_not eq(nil)
+     expect(JSON.parse(response.body)).to eq({"api_key" => "#{api_key}"})
     end
   end
 end
