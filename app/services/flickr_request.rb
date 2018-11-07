@@ -1,11 +1,6 @@
-class LocationSearch
+class FlickrRequest
   def initialize(location)
-    @location = location
-    @coordinates = get_google_geo_response
-  end
-
-  def get_dark_sky
-    parse(get_dark_sky_response)
+    @coordinates = GoogleGeoRequest.new(location).coordinates
   end
 
   def get_photos
@@ -18,15 +13,6 @@ class LocationSearch
       f.request :url_encoded
       f.adapter Faraday.default_adapter
     end
-  end
-
-  def get_google_geo_response
-    response = connection('https://maps.googleapis.com/maps/api/geocode/').get 'json', {:address => "#{@location}", :key => "#{ENV['google_api_key']}"}
-    parse(response)["results"][0]["geometry"]["location"]
-  end
-
-  def get_dark_sky_response
-    response = connection("https://api.darksky.net/forecast/#{ENV['dark_sky_api_key']}/#{@coordinates["lat"]},#{@coordinates["lng"]}").get
   end
 
   def get_flikr_response
@@ -52,4 +38,5 @@ class LocationSearch
       :extras         => "url_o"
     }
   end
+
 end
