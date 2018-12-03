@@ -6,6 +6,10 @@ class GoogleGeoRequest
     @coordinates = calculate_coordinates
   end
 
+  def get_location
+    parse(get_google_geo_response)
+  end
+
   private
   def connection(url)
     connect = Faraday.new(:url => "#{url}") do |f|
