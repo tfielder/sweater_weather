@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post '/users', to: 'user#create'
       get '/gifs', to: 'gif#index'
       post 'sessions', to: 'session#create'
+      get '/location', to: 'location#index'
     end
   end
 
